@@ -29,6 +29,20 @@ pwd
 ./script.sh
 
 
-echo "end of script."
+echo "end of bash script."
+
+echo "executing python.py"
+
+command -v python3 >/dev/null 2>&1 || {
+	echo "command python3 not found, exitting..."
+	exit 0
+}
+
+./python.py
+
+current_branch="$(git branch | grep \* | awk '{print $2}')"
+
+echo "your current branch is $current_branch"
+
 
 
