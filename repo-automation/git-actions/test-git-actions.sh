@@ -1,4 +1,3 @@
-cat > test-git-actions <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -10,5 +9,3 @@ cd "$DIR"
 ./fetch-changes.sh
 
 echo "OK: Vsetky git-actions skripty prebehli."
-EOF
-
