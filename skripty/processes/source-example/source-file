@@ -1,0 +1,19 @@
+#Put first argument into variable env
+env="$1"
+echo "your first argument is stored in local/temporary variable called 'env' "
+
+#run env command -show env variables in current CLI
+#get PWD variable and value from env variables in current CLI
+env | grep -i pwd
+
+#show env variable called 'PWD' from current CLI
+echo "showing env var PWD"
+echo "$PWD"
+
+#create new enviroment variable in current CLI
+export MY_VARIABLE='my_value'
+echo "showing added env var"
+env | grep -i my_variable
+#create alias in current CLI bash session
+alias msc='echo "used alias for my short command" '
+echo "now you can use alias 'msc' untill you quit this CLI"
